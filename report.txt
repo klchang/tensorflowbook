@@ -1,0 +1,1153 @@
+================================================================================
+Input tree: 'chapters'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'chapters/04_machine_learning_basics/softmax.py'
+ outputting to 'chapters_updated/04_machine_learning_basics/softmax.py'
+--------------------------------------------------------------------------------
+
+'chapters/04_machine_learning_basics/softmax.py' Line 50
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.pack' to 'tf.stack'
+
+    Old:     label_number = tf.to_int32(tf.argmax(tf.to_int32(tf.pack([
+                                                              ~~~~~~~   
+    New:     label_number = tf.to_int32(tf.argmax(tf.to_int32(tf.stack([
+                                                              ~~~~~~~~   
+
+'chapters/04_machine_learning_basics/softmax.py' Line 58
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.pack' to 'tf.stack'
+
+    Old:     features = tf.transpose(tf.pack([sepal_length, sepal_width, petal_length, petal_width]))
+                                     ~~~~~~~                                                          
+    New:     features = tf.transpose(tf.stack([sepal_length, sepal_width, petal_length, petal_width]))
+                                     ~~~~~~~~                                                          
+
+'chapters/04_machine_learning_basics/softmax.py' Line 78
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.initialize_all_variables' to 'tf.global_variables_initializer'
+
+    Old:     tf.initialize_all_variables().run()
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~         
+    New:     tf.global_variables_initializer().run()
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         
+
+'chapters/04_machine_learning_basics/softmax.py' Line 23
+--------------------------------------------------------------------------------
+
+Added keyword 'logits' to reordered function 'tf.nn.sparse_softmax_cross_entropy_with_logits'
+Added keyword 'labels' to reordered function 'tf.nn.sparse_softmax_cross_entropy_with_logits'
+
+    Old:     return tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(combine_inputs(X), Y))
+                                                                                                         
+    New:     return tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(logits=combine_inputs(X), labels=Y))
+                                                                                  ~~~~~~~                   ~~~~~~~    
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/04_machine_learning_basics/generic.py'
+ outputting to 'chapters_updated/04_machine_learning_basics/generic.py'
+--------------------------------------------------------------------------------
+
+'chapters/04_machine_learning_basics/generic.py' Line 32
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.initialize_all_variables' to 'tf.global_variables_initializer'
+
+    Old:     tf.initialize_all_variables().run()
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~         
+    New:     tf.global_variables_initializer().run()
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/04_machine_learning_basics/logistic_regression.py'
+ outputting to 'chapters_updated/04_machine_learning_basics/logistic_regression.py'
+--------------------------------------------------------------------------------
+
+'chapters/04_machine_learning_basics/logistic_regression.py' Line 57
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.pack' to 'tf.stack'
+
+    Old:     features = tf.transpose(tf.pack([is_first_class, is_second_class, is_third_class, gender, age]))
+                                     ~~~~~~~                                                                  
+    New:     features = tf.transpose(tf.stack([is_first_class, is_second_class, is_third_class, gender, age]))
+                                     ~~~~~~~~                                                                  
+
+'chapters/04_machine_learning_basics/logistic_regression.py' Line 77
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.initialize_all_variables' to 'tf.global_variables_initializer'
+
+    Old:     tf.initialize_all_variables().run()
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~         
+    New:     tf.global_variables_initializer().run()
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         
+
+'chapters/04_machine_learning_basics/logistic_regression.py' Line 23
+--------------------------------------------------------------------------------
+
+Added keyword 'logits' to reordered function 'tf.nn.sigmoid_cross_entropy_with_logits'
+Added keyword 'labels' to reordered function 'tf.nn.sigmoid_cross_entropy_with_logits'
+
+    Old:     return tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(combine_inputs(X), Y))
+                                                                                                  
+    New:     return tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=combine_inputs(X), labels=Y))
+                                                                           ~~~~~~~                   ~~~~~~~    
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/04_machine_learning_basics/linear_regression.py'
+ outputting to 'chapters_updated/04_machine_learning_basics/linear_regression.py'
+--------------------------------------------------------------------------------
+
+'chapters/04_machine_learning_basics/linear_regression.py' Line 40
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.initialize_all_variables' to 'tf.global_variables_initializer'
+
+    Old:     tf.initialize_all_variables().run()
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~         
+    New:     tf.global_variables_initializer().run()
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/08_helpers/attribute_dictionary.py'
+ outputting to 'chapters_updated/08_helpers/attribute_dictionary.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/08_helpers/overwrite_graph_decorator_example.py'
+ outputting to 'chapters_updated/08_helpers/overwrite_graph_decorator_example.py'
+--------------------------------------------------------------------------------
+
+Failed to parse 'chapters/08_helpers/overwrite_graph_decorator_example.py'
+
+Traceback (most recent call last):
+  File "tools/tf_upgrade.py", line 416, in process_opened_file
+    parsed_ast = ast.parse("".join(lines))
+  File "/usr/lib64/python2.7/ast.py", line 37, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 4
+    data = tf.placeholder(...)
+                          ^
+SyntaxError: invalid syntax
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/08_helpers/disk_cache_decorator.py'
+ outputting to 'chapters_updated/08_helpers/disk_cache_decorator.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/08_helpers/ensure_directory.py'
+ outputting to 'chapters_updated/08_helpers/ensure_directory.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/08_helpers/disk_cache_decorator_example.py'
+ outputting to 'chapters_updated/08_helpers/disk_cache_decorator_example.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/08_helpers/download.py'
+ outputting to 'chapters_updated/08_helpers/download.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/08_helpers/lazy_property_decorator_example.py'
+ outputting to 'chapters_updated/08_helpers/lazy_property_decorator_example.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/08_helpers/lazy_property_decorator.py'
+ outputting to 'chapters_updated/08_helpers/lazy_property_decorator.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/08_helpers/overwrite_graph_decorator.py'
+ outputting to 'chapters_updated/08_helpers/overwrite_graph_decorator.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/08_helpers/__init__.py'
+ outputting to 'chapters_updated/08_helpers/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/02_installation/my_first_tensorflow_code.py'
+ outputting to 'chapters_updated/02_installation/my_first_tensorflow_code.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/07_production/export.py'
+ outputting to 'chapters_updated/07_production/export.py'
+--------------------------------------------------------------------------------
+
+'chapters/07_production/export.py' Line 26
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.mul' to 'tf.multiply'
+Renamed function 'tf.sub' to 'tf.subtract'
+
+    Old:     images = tf.mul(tf.sub(images, 0.5), 2)
+                      ~~~~~~ ~~~~~~                  
+    New:     images = tf.multiply(tf.subtract(images, 0.5), 2)
+                      ~~~~~~~~~~~ ~~~~~~~~~~~                  
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/07_production/classification_service_pb2.py'
+ outputting to 'chapters_updated/07_production/classification_service_pb2.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/07_production/client.py'
+ outputting to 'chapters_updated/07_production/client.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/Embedding.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/Embedding.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/ImdbMovieReviews.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/ImdbMovieReviews.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/preprocess_batched.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/preprocess_batched.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/SequenceClassificationModel.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/SequenceClassificationModel.py'
+--------------------------------------------------------------------------------
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/SequenceClassificationModel.py' Line 19
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         used = tf.sign(tf.reduce_max(tf.abs(self.data), reduction_indices=2))
+                                                                 ~~~~~~~~~~~~~~~~~~    
+    New:         used = tf.sign(tf.reduce_max(tf.abs(self.data), axis=2))
+                                                                 ~~~~~    
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/SequenceClassificationModel.py' Line 20
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         length = tf.reduce_sum(used, reduction_indices=1)
+                                              ~~~~~~~~~~~~~~~~~~   
+    New:         length = tf.reduce_sum(used, axis=1)
+                                              ~~~~~   
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/train.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/train.py'
+--------------------------------------------------------------------------------
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/train.py' Line 34
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.initialize_all_variables' to 'tf.global_variables_initializer'
+
+    Old: sess.run(tf.initialize_all_variables())
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~    
+    New: sess.run(tf.global_variables_initializer())
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/attribute_dictionary.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/attribute_dictionary.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/overwrite_graph_decorator_example.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/overwrite_graph_decorator_example.py'
+--------------------------------------------------------------------------------
+
+Failed to parse 'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/overwrite_graph_decorator_example.py'
+
+Traceback (most recent call last):
+  File "tools/tf_upgrade.py", line 416, in process_opened_file
+    parsed_ast = ast.parse("".join(lines))
+  File "/usr/lib64/python2.7/ast.py", line 37, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 4
+    data = tf.placeholder(...)
+                          ^
+SyntaxError: invalid syntax
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/disk_cache_decorator.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/disk_cache_decorator.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/ensure_directory.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/ensure_directory.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/disk_cache_decorator_example.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/disk_cache_decorator_example.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/download.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/download.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/lazy_property_decorator_example.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/lazy_property_decorator_example.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/lazy_property_decorator.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/lazy_property_decorator.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/overwrite_graph_decorator.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/overwrite_graph_decorator.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/__init__.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/02_imdb/helpers/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/Preprocessing.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/Preprocessing.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/PredictiveCodingModel.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/PredictiveCodingModel.py'
+--------------------------------------------------------------------------------
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/PredictiveCodingModel.py' Line 33
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         return tf.reduce_sum(self.mask, reduction_indices=1)
+                                                 ~~~~~~~~~~~~~~~~~~   
+    New:         return tf.reduce_sum(self.mask, axis=1)
+                                                 ~~~~~   
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/PredictiveCodingModel.py' Line 75
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.mul' to 'tf.multiply'
+
+    Old:         logprob = tf.mul(self.prediction, self.target)
+                           ~~~~~~                               
+    New:         logprob = tf.multiply(self.prediction, self.target)
+                           ~~~~~~~~~~~                               
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/PredictiveCodingModel.py' Line 76
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         logprob = tf.reduce_max(logprob, reduction_indices=2)
+                                                  ~~~~~~~~~~~~~~~~~~   
+    New:         logprob = tf.reduce_max(logprob, axis=2)
+                                                  ~~~~~   
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/PredictiveCodingModel.py' Line 63
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         cost = -tf.reduce_sum(cost, reduction_indices=2)
+                                             ~~~~~~~~~~~~~~~~~~   
+    New:         cost = -tf.reduce_sum(cost, axis=2)
+                                             ~~~~~   
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/PredictiveCodingModel.py' Line 29
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         return tf.reduce_max(tf.abs(self.target), reduction_indices=2)
+                                                           ~~~~~~~~~~~~~~~~~~   
+    New:         return tf.reduce_max(tf.abs(self.target), axis=2)
+                                                           ~~~~~   
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/PredictiveCodingModel.py' Line 95
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         data = tf.reduce_sum(data, reduction_indices=1) / length
+                                            ~~~~~~~~~~~~~~~~~~            
+    New:         data = tf.reduce_sum(data, axis=1) / length
+                                            ~~~~~            
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/Sampling.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/Sampling.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/ArxivAbstracts.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/ArxivAbstracts.py'
+--------------------------------------------------------------------------------
+
+Failed to parse 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/ArxivAbstracts.py'
+
+Traceback (most recent call last):
+  File "tools/tf_upgrade.py", line 416, in process_opened_file
+    parsed_ast = ast.parse("".join(lines))
+  File "/usr/lib64/python2.7/ast.py", line 37, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 33
+    yield from self._fetch_page(page_size, count)
+             ^
+SyntaxError: invalid syntax
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/Training.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/Training.py'
+--------------------------------------------------------------------------------
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/Training.py' Line 67
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.initialize_all_variables' to 'tf.global_variables_initializer'
+
+    Old:             self.sess.run(tf.initialize_all_variables())
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~    
+    New:             self.sess.run(tf.global_variables_initializer())
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/get_params.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/get_params.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/sample.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/sample.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/train.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/train.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/attribute_dictionary.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/attribute_dictionary.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/overwrite_graph_decorator_example.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/overwrite_graph_decorator_example.py'
+--------------------------------------------------------------------------------
+
+Failed to parse 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/overwrite_graph_decorator_example.py'
+
+Traceback (most recent call last):
+  File "tools/tf_upgrade.py", line 416, in process_opened_file
+    parsed_ast = ast.parse("".join(lines))
+  File "/usr/lib64/python2.7/ast.py", line 37, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 4
+    data = tf.placeholder(...)
+                          ^
+SyntaxError: invalid syntax
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/disk_cache_decorator.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/disk_cache_decorator.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/ensure_directory.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/ensure_directory.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/disk_cache_decorator_example.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/disk_cache_decorator_example.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/download.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/download.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/lazy_property_decorator_example.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/lazy_property_decorator_example.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/lazy_property_decorator.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/lazy_property_decorator.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/overwrite_graph_decorator.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/overwrite_graph_decorator.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/__init__.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/04_arxiv/helpers/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/BidirectionalSequenceLabellingModel.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/BidirectionalSequenceLabellingModel.py'
+--------------------------------------------------------------------------------
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/BidirectionalSequenceLabellingModel.py' Line 65
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         cross_entropy = -tf.reduce_sum(cross_entropy, reduction_indices=2)
+                                                               ~~~~~~~~~~~~~~~~~~   
+    New:         cross_entropy = -tf.reduce_sum(cross_entropy, axis=2)
+                                                               ~~~~~   
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/BidirectionalSequenceLabellingModel.py' Line 66
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         mask = tf.sign(tf.reduce_max(tf.abs(self.target), reduction_indices=2))
+                                                                   ~~~~~~~~~~~~~~~~~~    
+    New:         mask = tf.sign(tf.reduce_max(tf.abs(self.target), axis=2))
+                                                                   ~~~~~    
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/BidirectionalSequenceLabellingModel.py' Line 69
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         cross_entropy = tf.reduce_sum(cross_entropy, reduction_indices=1)
+                                                              ~~~~~~~~~~~~~~~~~~   
+    New:         cross_entropy = tf.reduce_sum(cross_entropy, axis=1)
+                                                              ~~~~~   
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/BidirectionalSequenceLabellingModel.py' Line 41
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'seq_dim' to 'seq_axis'
+
+    Old:             inputs=tf.reverse_sequence(data, length_64, seq_dim=1),
+                                                                 ~~~~~~~~    
+    New:             inputs=tf.reverse_sequence(data, length_64, seq_axis=1),
+                                                                 ~~~~~~~~~    
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/BidirectionalSequenceLabellingModel.py' Line 45
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'seq_dim' to 'seq_axis'
+
+    Old:         backward = tf.reverse_sequence(backward, length_64, seq_dim=1)
+                                                                     ~~~~~~~~   
+    New:         backward = tf.reverse_sequence(backward, length_64, seq_axis=1)
+                                                                     ~~~~~~~~~   
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/BidirectionalSequenceLabellingModel.py' Line 46
+--------------------------------------------------------------------------------
+
+Added keyword 'concat_dim' to reordered function 'tf.concat'
+Added keyword 'values' to reordered function 'tf.concat'
+
+    Old:         output = tf.concat(2, [forward, backward])
+                                                            
+    New:         output = tf.concat(axis=2, values=[forward, backward])
+                                    ~~~~~   ~~~~~~~                     
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/BidirectionalSequenceLabellingModel.py' Line 81
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         mistakes = tf.reduce_sum(mistakes, reduction_indices=1)
+                                                    ~~~~~~~~~~~~~~~~~~   
+    New:         mistakes = tf.reduce_sum(mistakes, axis=1)
+                                                    ~~~~~   
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/BidirectionalSequenceLabellingModel.py' Line 19
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         used = tf.sign(tf.reduce_max(tf.abs(self.data), reduction_indices=2))
+                                                                 ~~~~~~~~~~~~~~~~~~    
+    New:         used = tf.sign(tf.reduce_max(tf.abs(self.data), axis=2))
+                                                                 ~~~~~    
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/BidirectionalSequenceLabellingModel.py' Line 20
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         length = tf.reduce_sum(used, reduction_indices=1)
+                                              ~~~~~~~~~~~~~~~~~~   
+    New:         length = tf.reduce_sum(used, axis=1)
+                                              ~~~~~   
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/BidirectionalSequenceLabellingModel.py' Line 78
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         mask = tf.sign(tf.reduce_max(tf.abs(self.target), reduction_indices=2))
+                                                                   ~~~~~~~~~~~~~~~~~~    
+    New:         mask = tf.sign(tf.reduce_max(tf.abs(self.target), axis=2))
+                                                                   ~~~~~    
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/train_bidirectional.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/train_bidirectional.py'
+--------------------------------------------------------------------------------
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/train_bidirectional.py' Line 54
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.initialize_all_variables' to 'tf.global_variables_initializer'
+
+    Old: sess.run(tf.initialize_all_variables())
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~    
+    New: sess.run(tf.global_variables_initializer())
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/SequenceLabellingModel.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/SequenceLabellingModel.py'
+--------------------------------------------------------------------------------
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/SequenceLabellingModel.py' Line 64
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         mistakes = tf.reduce_sum(mistakes, reduction_indices=1)
+                                                    ~~~~~~~~~~~~~~~~~~   
+    New:         mistakes = tf.reduce_sum(mistakes, axis=1)
+                                                    ~~~~~   
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/SequenceLabellingModel.py' Line 48
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         cross_entropy = -tf.reduce_sum(cross_entropy, reduction_indices=2)
+                                                               ~~~~~~~~~~~~~~~~~~   
+    New:         cross_entropy = -tf.reduce_sum(cross_entropy, axis=2)
+                                                               ~~~~~   
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/SequenceLabellingModel.py' Line 49
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         mask = tf.sign(tf.reduce_max(tf.abs(self.target), reduction_indices=2))
+                                                                   ~~~~~~~~~~~~~~~~~~    
+    New:         mask = tf.sign(tf.reduce_max(tf.abs(self.target), axis=2))
+                                                                   ~~~~~    
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/SequenceLabellingModel.py' Line 19
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         used = tf.sign(tf.reduce_max(tf.abs(self.data), reduction_indices=2))
+                                                                 ~~~~~~~~~~~~~~~~~~    
+    New:         used = tf.sign(tf.reduce_max(tf.abs(self.data), axis=2))
+                                                                 ~~~~~    
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/SequenceLabellingModel.py' Line 20
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         length = tf.reduce_sum(used, reduction_indices=1)
+                                              ~~~~~~~~~~~~~~~~~~   
+    New:         length = tf.reduce_sum(used, axis=1)
+                                              ~~~~~   
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/SequenceLabellingModel.py' Line 52
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         cross_entropy = tf.reduce_sum(cross_entropy, reduction_indices=1)
+                                                              ~~~~~~~~~~~~~~~~~~   
+    New:         cross_entropy = tf.reduce_sum(cross_entropy, axis=1)
+                                                              ~~~~~   
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/SequenceLabellingModel.py' Line 61
+--------------------------------------------------------------------------------
+
+Renamed keyword argument from 'reduction_indices' to 'axis'
+
+    Old:         mask = tf.sign(tf.reduce_max(tf.abs(self.target), reduction_indices=2))
+                                                                   ~~~~~~~~~~~~~~~~~~    
+    New:         mask = tf.sign(tf.reduce_max(tf.abs(self.target), axis=2))
+                                                                   ~~~~~    
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/batched.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/batched.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/OcrDataset.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/OcrDataset.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/train.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/train.py'
+--------------------------------------------------------------------------------
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/train.py' Line 53
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.initialize_all_variables' to 'tf.global_variables_initializer'
+
+    Old: sess.run(tf.initialize_all_variables())
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~    
+    New: sess.run(tf.global_variables_initializer())
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/attribute_dictionary.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/attribute_dictionary.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/overwrite_graph_decorator_example.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/overwrite_graph_decorator_example.py'
+--------------------------------------------------------------------------------
+
+Failed to parse 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/overwrite_graph_decorator_example.py'
+
+Traceback (most recent call last):
+  File "tools/tf_upgrade.py", line 416, in process_opened_file
+    parsed_ast = ast.parse("".join(lines))
+  File "/usr/lib64/python2.7/ast.py", line 37, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 4
+    data = tf.placeholder(...)
+                          ^
+SyntaxError: invalid syntax
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/disk_cache_decorator.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/disk_cache_decorator.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/ensure_directory.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/ensure_directory.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/disk_cache_decorator_example.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/disk_cache_decorator_example.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/download.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/download.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/lazy_property_decorator_example.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/lazy_property_decorator_example.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/lazy_property_decorator.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/lazy_property_decorator.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/overwrite_graph_decorator.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/overwrite_graph_decorator.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/__init__.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/03_ocr/helpers/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/skipgrams.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/skipgrams.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/EmbeddingModel.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/EmbeddingModel.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/batched.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/batched.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/Wikipedia.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/Wikipedia.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/train.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/train.py'
+--------------------------------------------------------------------------------
+
+'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/train.py' Line 37
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.initialize_all_variables' to 'tf.global_variables_initializer'
+
+    Old: sess.run(tf.initialize_all_variables())
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~    
+    New: sess.run(tf.global_variables_initializer())
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/attribute_dictionary.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/attribute_dictionary.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/overwrite_graph_decorator_example.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/overwrite_graph_decorator_example.py'
+--------------------------------------------------------------------------------
+
+Failed to parse 'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/overwrite_graph_decorator_example.py'
+
+Traceback (most recent call last):
+  File "tools/tf_upgrade.py", line 416, in process_opened_file
+    parsed_ast = ast.parse("".join(lines))
+  File "/usr/lib64/python2.7/ast.py", line 37, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 4
+    data = tf.placeholder(...)
+                          ^
+SyntaxError: invalid syntax
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/disk_cache_decorator.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/disk_cache_decorator.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/ensure_directory.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/ensure_directory.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/disk_cache_decorator_example.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/disk_cache_decorator_example.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/download.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/download.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/lazy_property_decorator_example.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/lazy_property_decorator_example.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/lazy_property_decorator.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/lazy_property_decorator.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/overwrite_graph_decorator.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/overwrite_graph_decorator.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/__init__.py'
+ outputting to 'chapters_updated/06_recurrent_neural_networks_and_natural_language_processing/01_wikipedia/helpers/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/03_tensorflow_fundamentals/name_scopes.py'
+ outputting to 'chapters_updated/03_tensorflow_fundamentals/name_scopes.py'
+--------------------------------------------------------------------------------
+
+'chapters/03_tensorflow_fundamentals/name_scopes.py' Line 33
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.mul' to 'tf.multiply'
+
+    Old:             B_mul = tf.mul(in_2, const)
+                             ~~~~~~              
+    New:             B_mul = tf.multiply(in_2, const)
+                             ~~~~~~~~~~~              
+
+'chapters/03_tensorflow_fundamentals/name_scopes.py' Line 34
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.sub' to 'tf.subtract'
+
+    Old:             B_out = tf.sub(B_mul, in_2)
+                             ~~~~~~              
+    New:             B_out = tf.subtract(B_mul, in_2)
+                             ~~~~~~~~~~~              
+
+'chapters/03_tensorflow_fundamentals/name_scopes.py' Line 6
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.mul' to 'tf.multiply'
+
+    Old:     b = tf.mul(a, 3, name="A_mul")
+                 ~~~~~~                     
+    New:     b = tf.multiply(a, 3, name="A_mul")
+                 ~~~~~~~~~~~                     
+
+'chapters/03_tensorflow_fundamentals/name_scopes.py' Line 10
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.mul' to 'tf.multiply'
+
+    Old:     d = tf.mul(c, 6, name="B_mul")
+                 ~~~~~~                     
+    New:     d = tf.multiply(c, 6, name="B_mul")
+                 ~~~~~~~~~~~                     
+
+'chapters/03_tensorflow_fundamentals/name_scopes.py' Line 14
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.train.SummaryWriter' to 'tf.summary.FileWriter'
+
+    Old: writer = tf.train.SummaryWriter('./name_scope_1', graph=tf.get_default_graph())
+                  ~~~~~~~~~~~~~~~~~~~~~~                                                 
+    New: writer = tf.summary.FileWriter('./name_scope_1', graph=tf.get_default_graph())
+                  ~~~~~~~~~~~~~~~~~~~~~                                                 
+
+'chapters/03_tensorflow_fundamentals/name_scopes.py' Line 46
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.train.SummaryWriter' to 'tf.summary.FileWriter'
+
+    Old: writer = tf.train.SummaryWriter('./name_scope_2', graph=graph)
+                  ~~~~~~~~~~~~~~~~~~~~~~                                
+    New: writer = tf.summary.FileWriter('./name_scope_2', graph=graph)
+                  ~~~~~~~~~~~~~~~~~~~~~                                
+
+'chapters/03_tensorflow_fundamentals/name_scopes.py' Line 29
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.mul' to 'tf.multiply'
+
+    Old:             A_mul = tf.mul(in_1, const)
+                             ~~~~~~              
+    New:             A_mul = tf.multiply(in_1, const)
+                             ~~~~~~~~~~~              
+
+'chapters/03_tensorflow_fundamentals/name_scopes.py' Line 30
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.sub' to 'tf.subtract'
+
+    Old:             A_out = tf.sub(A_mul, in_1)
+                             ~~~~~~              
+    New:             A_out = tf.subtract(A_mul, in_1)
+                             ~~~~~~~~~~~              
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/03_tensorflow_fundamentals/vectorized_graph.py'
+ outputting to 'chapters_updated/03_tensorflow_fundamentals/vectorized_graph.py'
+--------------------------------------------------------------------------------
+
+'chapters/03_tensorflow_fundamentals/vectorized_graph.py' Line 35
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.sub' to 'tf.subtract'
+
+    Old:             output = tf.sub(d, previous_value, name="output")
+                              ~~~~~~                                   
+    New:             output = tf.subtract(d, previous_value, name="output")
+                              ~~~~~~~~~~~                                   
+
+'chapters/03_tensorflow_fundamentals/vectorized_graph.py' Line 40
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.scalar_summary' to 'tf.summary.scalar'
+
+    Old:         tf.scalar_summary(b'output', output, name="output_summary")  # Creates summary for output node
+                 ~~~~~~~~~~~~~~~~~                                                                              
+    New:         tf.summary.scalar(b'output', output, name="output_summary")  # Creates summary for output node
+                 ~~~~~~~~~~~~~~~~~                                                                              
+
+'chapters/03_tensorflow_fundamentals/vectorized_graph.py' Line 41
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.scalar_summary' to 'tf.summary.scalar'
+
+    Old:         tf.scalar_summary(b'product of inputs', b, name="prod_summary")
+                 ~~~~~~~~~~~~~~~~~                                               
+    New:         tf.summary.scalar(b'product of inputs', b, name="prod_summary")
+                 ~~~~~~~~~~~~~~~~~                                               
+
+'chapters/03_tensorflow_fundamentals/vectorized_graph.py' Line 42
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.scalar_summary' to 'tf.summary.scalar'
+
+    Old:         tf.scalar_summary(b'sum of inputs', c, name="sum_summary")
+                 ~~~~~~~~~~~~~~~~~                                          
+    New:         tf.summary.scalar(b'sum of inputs', c, name="sum_summary")
+                 ~~~~~~~~~~~~~~~~~                                          
+
+'chapters/03_tensorflow_fundamentals/vectorized_graph.py' Line 47
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.initialize_all_variables' to 'tf.global_variables_initializer'
+
+    Old:         init = tf.initialize_all_variables()
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~   
+    New:         init = tf.global_variables_initializer()
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   
+
+'chapters/03_tensorflow_fundamentals/vectorized_graph.py' Line 49
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.merge_all_summaries' to 'tf.summary.merge_all'
+
+    Old:         merged_summaries = tf.merge_all_summaries()
+                                    ~~~~~~~~~~~~~~~~~~~~~~   
+    New:         merged_summaries = tf.summary.merge_all()
+                                    ~~~~~~~~~~~~~~~~~~~~   
+
+'chapters/03_tensorflow_fundamentals/vectorized_graph.py' Line 55
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.train.SummaryWriter' to 'tf.summary.FileWriter'
+
+    Old: writer = tf.train.SummaryWriter('./improved_graph', graph)
+                  ~~~~~~~~~~~~~~~~~~~~~~                            
+    New: writer = tf.summary.FileWriter('./improved_graph', graph)
+                  ~~~~~~~~~~~~~~~~~~~~~                            
+
+
+--------------------------------------------------------------------------------
+Processing file 'chapters/03_tensorflow_fundamentals/basic_graph.py'
+ outputting to 'chapters_updated/03_tensorflow_fundamentals/basic_graph.py'
+--------------------------------------------------------------------------------
+
+'chapters/03_tensorflow_fundamentals/basic_graph.py' Line 18
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.train.SummaryWriter' to 'tf.summary.FileWriter'
+
+    Old: writer = tf.train.SummaryWriter('./my_graph', sess.graph)
+                  ~~~~~~~~~~~~~~~~~~~~~~                           
+    New: writer = tf.summary.FileWriter('./my_graph', sess.graph)
+                  ~~~~~~~~~~~~~~~~~~~~~                           
+
+'chapters/03_tensorflow_fundamentals/basic_graph.py' Line 7
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.mul' to 'tf.multiply'
+
+    Old: c = tf.mul(a,b, name="mul_c")
+             ~~~~~~                    
+    New: c = tf.multiply(a,b, name="mul_c")
+             ~~~~~~~~~~~                    
+
+
